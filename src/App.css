@@ -13,6 +13,27 @@
   }
 }
 
+input {
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: green;
+  transition: background-color 1s;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+  background-color: greenyellow;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +56,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.error {
+  font-size: 1rem;
 }
