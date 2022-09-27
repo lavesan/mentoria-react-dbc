@@ -6,8 +6,6 @@ export function Header() {
       style={{
         display: "flex",
         flexFlow: "column wrap",
-        color: "white",
-        background: "black",
       }}
     >
       <a href="https://google.com" target="_blank" rel="noopener noreferer">

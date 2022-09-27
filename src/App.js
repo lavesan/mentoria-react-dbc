@@ -5,6 +5,7 @@ import Home from "./containers/Home";
 import About from "./containers/About";
 import QueryParam from "./containers/QueryParam";
 import AppLayout from "./containers/Layout/AppLayout";
+import ExampleUseMemo from "./containers/ExampleUseMemo";
 
 function App() {
   return (
@@ -24,6 +25,14 @@ function App() {
           element={
             <AppLayout>
               <QueryParam />
+            </AppLayout>
+          }
+        />
+        <Route
+          path="/query/:id"
+          element={
+            <AppLayout>
+              <ExampleUseMemo />
             </AppLayout>
           }
         />

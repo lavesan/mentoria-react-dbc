@@ -4,9 +4,7 @@ import * as yup from "yup";
 
 import { EMAIL, MIN_4, REQUIRED } from "../helpers/validation.helper";
 import { addressService } from "../services";
-import { useEffect } from "react";
-import { useState } from "react";
-import axios from "axios";
+import { Button, Input } from "@sicredi/react";
 
 const reg = /(\d)+|(\w)+/;
 
@@ -64,21 +62,32 @@ export const FormComponent = () => {
       onSubmit={onSubmit}
       style={{ display: "flex", flexFlow: "column wrap" }}
     >
-      <input
-        placeholder="Nome"
+      <Input
+        label="Nome"
         // disabled={register('name').disabled}
         // value={register('name').value}
         // onChange={register('name').onChange}
         {...register("nome")}
+        errorMessage={errors.name && errors.name.message}
       />
-      <p className="error">{errors.name && errors.name.message}</p>
-      <input placeholder="E-mail" {...register("email")} />
-      <p className="error">{errors.email && errors.email.message}</p>
-      <input placeholder="CPF" {...register("cpf")} />
-      <p className="error">{errors.cep && errors.cep.message}</p>
-      <input placeholder="Data Nascimento" {...register("dataNascimento")} />
-      <p className="error">{errors.cep && errors.cep.message}</p>
-      <button type="submit">Submeter</button>
+      <Input
+        label="E-mail"
+        {...register("email")}
+        errorMessage={errors.email && errors.email.message}
+      />
+      <Input
+        label="CPF"
+        {...register("cpf")}
+        errorMessage={errors.cep && errors.cep.message}
+      />
+      <Input
+        label="Data Nascimento"
+        {...register("dataNascimento")}
+        errorMessage={errors.cep && errors.cep.message}
+      />
+      <Button type="submit" appearance="primary">
+        Submeter
+      </Button>
     </form>
   );
 };

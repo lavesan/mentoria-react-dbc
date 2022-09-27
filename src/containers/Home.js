@@ -1,5 +1,6 @@
 import { FormComponent } from "../components/Form";
 import { parseCookies, setCookie, destroyCookie } from "nookies";
+import { useState } from "react";
 
 export default function Home() {
   // Local storage
