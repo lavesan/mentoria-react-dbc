@@ -1,3 +1,42 @@
+@import "~@sicredi/styles/variables";
+
 .customStyle {
-    color: pink;
+    border: thin solid #000;
+    border-radius: 5px;
+
+    &Box {
+        background-color: $appleBlossom;
+        padding: 10px;
+
+        &Title {
+            color: red;
+            background-color: var(--blue-500);
+        }
+
+        &Submit {
+            padding: 5px;
+            border-radius: 4px;
+            background-color: aqua;
+            border-color: aqua;
+            transition: 0.5s;
+            color: #000;
+            cursor: pointer;
+
+            &:hover {
+                background-color: aquamarine;
+                border-color: aquamarine;
+            }
+        }
+    }
+
+    &Text {
+        color: pink;
+    }
+
+    // .customStyle .error {
+    //     Mesma coisa de escrever isso fora
+    // }
+    .error {
+        color: red;
+    }
 }

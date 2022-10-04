@@ -16,6 +16,7 @@ export function Header() {
       <Link to="/query/123?text=TextoTeste">Query Param</Link>
       <Link to="/store-example">Store</Link>
       <Link to="/map-example">Map Example</Link>
+      <Link to="/example-use-memo">Use Memo Example</Link>
       <Link to="/styling-scss-page">Scss page</Link>
     </header>
   );

@@ -10,6 +10,8 @@ import { StylingPage } from "./containers/StylingPage";
 import { StoreExample } from "./containers/StoreExample";
 import MapExample from "./containers/MapExample";
 
+import "./styles/global.scss";
+
 function App() {
   return (
     <Router>
@@ -32,7 +34,7 @@ function App() {
           }
         />
         <Route
-          path="/query/:id"
+          path="/example-use-memo"
           element={
             <AppLayout>
               <ExampleUseMemo />
