@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function About() {
+export default function NavigateExample() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <div>
-      <h1>Sobre</h1>
+      <h1>Vai redirecionar</h1>
     </div>
   );
 }

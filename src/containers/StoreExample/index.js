@@ -1,8 +1,6 @@
-import { FormComponent } from "../components/Form";
 import { parseCookies, setCookie, destroyCookie } from "nookies";
-import { useState } from "react";
 
-export default function Home() {
+export const StoreExample = () => {
   // Local storage
   // Persiste até ser removido
   localStorage.setItem(
@@ -42,8 +40,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
-      <FormComponent />
+      <p>Cookies | local storage | session storage</p>
     </div>
   );
-}
+};

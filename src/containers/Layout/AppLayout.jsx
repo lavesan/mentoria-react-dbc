@@ -5,6 +5,7 @@ export default function AppLayout({ children }) {
     <div className="App">
       <Header />
       {children}
+      <footer>Rodapé</footer>
     </div>
   );
 }

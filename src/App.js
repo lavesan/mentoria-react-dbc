@@ -2,10 +2,13 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./containers/Home";
-import About from "./containers/About";
+import NavigateExample from "./containers/NavigateExample";
 import QueryParam from "./containers/QueryParam";
 import AppLayout from "./containers/Layout/AppLayout";
 import ExampleUseMemo from "./containers/ExampleUseMemo";
+import { StylingPage } from "./containers/StylingPage";
+import { StoreExample } from "./containers/StoreExample";
+import MapExample from "./containers/MapExample";
 
 function App() {
   return (
@@ -19,7 +22,7 @@ function App() {
             </AppLayout>
           }
         />
-        <Route path="/sobre" element={<About />} />
+        <Route path="/navigate-example" element={<NavigateExample />} />
         <Route
           path="/query/:id"
           element={
@@ -36,8 +39,31 @@ function App() {
             </AppLayout>
           }
         />
+        <Route
+          path="/store-example"
+          element={
+            <AppLayout>
+              <StoreExample />
+            </AppLayout>
+          }
+        />
+        <Route
+          path="/map-example"
+          element={
+            <AppLayout>
+              <MapExample />
+            </AppLayout>
+          }
+        />
+        <Route
+          path="/styling-scss-page"
+          element={
+            <AppLayout>
+              <StylingPage />
+            </AppLayout>
+          }
+        />
       </Routes>
-      <footer>Rodapé</footer>
     </Router>
   );
 }
