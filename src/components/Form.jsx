@@ -68,7 +68,7 @@ export const FormComponent = () => {
         // value={register('name').value}
         // onChange={register('name').onChange}
         {...register("nome")}
-        errorMessage={errors.name && errors.name.message}
+        errorMessage={errors.nome && errors.nome.message}
       />
       <Input
         label="E-mail"

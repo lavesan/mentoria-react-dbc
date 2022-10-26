@@ -20,5 +20,5 @@ const { var2, ...restoDoObjeto } = myObj;
 const myObj2 = {
   var3: 123,
   // var1: restoDoObjeto.var1,
-  ...restoDoObjeto,
+  ...myObj,
 };

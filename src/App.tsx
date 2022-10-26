@@ -8,6 +8,7 @@ import AppLayout from "./containers/Layout/AppLayout";
 import ExampleUseMemo from "./containers/ExampleUseMemo";
 import { StylingPage } from "./containers/StylingPage";
 import { StoreExample } from "./containers/StoreExample";
+import { TypescriptExample } from "./containers/TypescriptExample";
 import MapExample from "./containers/MapExample";
 
 import "./styles/global.scss";
@@ -62,6 +63,14 @@ function App() {
           element={
             <AppLayout>
               <StylingPage />
+            </AppLayout>
+          }
+        />
+        <Route
+          path="/typescript-page"
+          element={
+            <AppLayout>
+              <TypescriptExample />
             </AppLayout>
           }
         />

@@ -18,6 +18,7 @@ export function Header() {
       <Link to="/map-example">Map Example</Link>
       <Link to="/example-use-memo">Use Memo Example</Link>
       <Link to="/styling-scss-page">Scss page</Link>
+      <Link to="/typescript-page">Typescript example</Link>
     </header>
   );
 }
