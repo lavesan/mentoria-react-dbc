@@ -12,6 +12,7 @@ import { TypescriptExample } from "./containers/TypescriptExample";
 import MapExample from "./containers/MapExample";
 
 import "./styles/global.scss";
+import JestTestExample from "./containers/JestTestExample";
 
 function App() {
   return (
@@ -71,6 +72,14 @@ function App() {
           element={
             <AppLayout>
               <TypescriptExample />
+            </AppLayout>
+          }
+        />
+        <Route
+          path="/jest-test-page"
+          element={
+            <AppLayout>
+              <JestTestExample />
             </AppLayout>
           }
         />

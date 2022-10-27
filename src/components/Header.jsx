@@ -19,6 +19,7 @@ export function Header() {
       <Link to="/example-use-memo">Use Memo Example</Link>
       <Link to="/styling-scss-page">Scss page</Link>
       <Link to="/typescript-page">Typescript example</Link>
+      <Link to="/jest-test-page">Jest Test example</Link>
     </header>
   );
 }

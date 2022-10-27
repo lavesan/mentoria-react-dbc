@@ -57,16 +57,12 @@ function GenericComp<Generic>({ param }: IGenericCompProps<Generic>) {
   return <div>Componente genérico</div>;
 }
 
-export const TypescriptExample = ({
-  paramFixo,
-  param2Natives,
-  paramObject,
-}: ITypescriptExampleProps) => {
-  if (paramFixo === 1) {
-  }
+export const TypescriptExample = () => {
+  // if (paramFixo === 1) {
+  // }
 
-  if (typeof param2Natives === "boolean") {
-  }
+  // if (typeof param2Natives === "boolean") {
+  // }
 
   return (
     <div>

@@ -1,0 +1,43 @@
+import { Paragraph, Button, Badge, Input } from "@sicredi/react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+interface IForm {
+  name: string;
+  email: string;
+}
+
+const validationSchema = yup.object({
+  name: yup.string().required(),
+  email: yup.string().required().email(),
+});
+
+export default function JestTestExample() {
+  const { handleSubmit, register } = useForm<IForm>({
+    mode: "all",
+    resolver: yupResolver(validationSchema),
+  });
+  const [show, setShow] = useState(false);
+
+  const onSubmit = handleSubmit(async (values) => {
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        setShow(true);
+        resolve(null);
+      }, 2000);
+    });
+  });
+
+  return (
+    <>
+      <form onSubmit={onSubmit}>
+        <Input label="Nome" {...register("name")} />
+        <Input label="Email" {...register("email")} />
+        <Button type="submit">Submeter</Button>
+      </form>
+      {show && <Badge>Formulário submetido com sucesso</Badge>}
+    </>
+  );
+}
