@@ -1,4 +1,4 @@
-import { Paragraph, Button, Badge, Input } from "@sicredi/react";
+import { Button, Badge, Input } from "@sicredi/react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -22,12 +22,12 @@ export default function JestTestExample() {
   const [show, setShow] = useState(false);
 
   const onSubmit = handleSubmit(async (values) => {
-    await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        setShow(true);
-        resolve(null);
-      }, 2000);
-    });
+    setTimeout(() => {
+      setShow(true);
+    }, 2000);
+    // resolve(null);
+    // await new Promise((resolve, reject) => {
+    // });
   });
 
   return (

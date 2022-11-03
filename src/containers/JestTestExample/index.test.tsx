@@ -5,9 +5,9 @@ describe("Containers -> JestTestExample", () => {
   it("should render", () => {
     render(<JestTestExample />);
 
-    screen.logTestingPlaygroundURL();
+    // screen.logTestingPlaygroundURL();
 
-    expect(screen.getByText("Submeter")).toBeTruthy();
+    expect(screen.getByText(/submeter/i)).toBeTruthy();
   });
 
   it("should show hidden text when form is correctly submitted", async () => {
@@ -30,7 +30,7 @@ describe("Containers -> JestTestExample", () => {
         ).toBeTruthy();
       },
       {
-        timeout: 3000,
+        timeout: 2200,
       }
     );
   });
